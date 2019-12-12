@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+{% load crispy_forms_tags %}
+<html lang="en" dir="ltr">
+  <head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h2>Employee Details</h2>
+    <table border=1>
+      <tr>
+        <th>Employee ID:</th>
+        <th>Employee Name:</th>
+        <th>Employee Designation:</th>
+        <th>Employee Salary:</th>
+        <th>Action</th>
+      </tr>
+      {% for i in emp %}
+      <tr>
+        <td>{{i.eid}}</td>
+        <td>{{i.ename}}</td>
+        <td>{{i.edes}}</td>
+        <td>{{i.esal}}</td>
+        <td><a href="/delete/{{i.eid}}/"><button type="submit" name="button">Delete</button></a>
+        <a href="/update/{{i.eid}}/"><button type="submit" name="button">Update</button></a></td>
+      </tr>
+      {% endfor %}
+    </table>
+    <br>
+    <a href="/add/"><button type="submit" name="button">Add Employee</button></a><br><br>
+    {% if messages %}
+    {% for messages in messages %}
+      {{messages}}
+      {% endfor %}
+    {% endif %}
+    <br><br>
+    <form class="" action="/login/" method="POST">{% csrf_token %}
+    <a href="#"><button type="submit" name="button">Logout</button></a>
+    </form>
+
+  </body>
+</html>
