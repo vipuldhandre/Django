@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+  <head>
+    <link rel="stylesheet" href="{% static "css/style.css" %}">
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+      <u><h1>Search App</h1></u>
+      <form class="" action="/search/" method="get">{% csrf_token %}
+      <input type="text" name="stuname" value="" placeholder="Search Here!">
+      <button type="submit" name="button">Search</button><br><br>
+      <hr>
+      <ol>
+        {% for i in data.values %}
+        <h4><li>{{i.stuname}}</li></h4>
+        {% endfor %}
+      </ol>
+    </form>
+    <ol>
+    {% for i in data1 %}
+    <h4><li>{{i}}
+    {% endfor %}
+    </li>
+    </ol>
+ </body>
+</html>

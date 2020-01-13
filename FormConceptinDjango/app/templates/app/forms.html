@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    {{formerror}}
+    <form action="/forms/" method="POST">{% csrf_token %}
+    {{form.as_p}}
+    <button type="submit" name="button">ADD</button>
+    </form>
+    {% for i in book %}
+    <li>{{i.bname}}
+    {{i.bauthor}}
+  {{i.bprice}}</li>
+
+    {% endfor %}
+  </body>
+</html>

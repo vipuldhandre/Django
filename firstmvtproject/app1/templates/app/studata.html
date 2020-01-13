@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+  <head>
+    <link rel="stylesheet" href="{% static "css/style.css" %}">
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <table border=2>
+      <h1>{{msg}}</h1>
+      {% if studata %}
+      <thead>
+        <tr>
+          <th>Id</th>
+          <th>Name</th>
+          <th>RollNo</th>
+          <th>Class</th>
+          <th>School</th>
+        </tr>
+      </thead>
+      {% for stu in studata %}
+      <tr>
+        <td>{{stu.sid}}</td>
+        <td>{{stu.sname}}</td>
+        <td>{{stu.srn}}</td>
+        <td>{{stu.sclass}}</td>
+        <td>{{stu.sschool}}</td>
+      </tr>
+      {% endfor %}
+      {% else %}
+      <h4>No records Found</h4>
+      {% endif %}
+    </table>
+  </body>
+</html>

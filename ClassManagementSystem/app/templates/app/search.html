@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+      {% for i in data %}
+      <h1>Student Information</h1>
+        {{i.sname}}
+        <li>  {{i.course}}</li>
+          {% for j in i.faculty.all %}
+            <li>{{j}}
+          {% endfor %}
+          {% for k in i.batch.all %}
+            <li>{{k}}
+          {% endfor %}
+
+
+      </li>
+      {% endfor %}
+
+      
+
+
+
+  </body>
+</html>

@@ -1,0 +1,15 @@
+body{
+  background-color: powderblue;
+  text-align: center;
+}
+ol{
+  width: 20%;
+  margin: auto;
+}
+li{
+  text-align: left;
+  width: 20%;
+}
+hr{
+  height: 40%;
+}

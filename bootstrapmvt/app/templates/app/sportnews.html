@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+  <head>
+    <link rel="stylesheet" href="{% static "css/style.css" %}">
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    {% for i in data1 %}
+    <h1><li>{{i}}</h1>
+    {% endfor %}
+
+  </body>
+</html>

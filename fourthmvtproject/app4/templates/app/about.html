@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body style="background-color:#C8FF00">
+    <table border=1>
+      <h1>Student Table</h1>
+      {% if stuData %}
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Roll No.</th>
+          <th>Address</th>
+          <th>School</th>
+        </tr>
+      </thead>
+      {% for stu in stuData %}
+      <tr>
+        <td>{{stu.name}}</td>
+        <td>{{stu.rollno}}</td>
+        <td>{{stu.address}}</td>
+        <td>{{stu.school}}</td>
+      </tr>
+      {% endfor %}
+      {% else %}
+          <h1>  No records found</h1>
+      {% endif %}
+    </table>
+    <table border=2>
+      <h1>Employee Table</h1>
+      {% if empData %}
+      <thead>
+        <tr>
+          <th>Employee Id</th>
+          <th>Employee Name</th>
+          <th>Employee Address</th>
+          <th>Employee Mob.No.</th>
+        </tr>
+      </thead>
+      <tr>
+        {% for emp in empData %}
+        <td>{{emp.eid}}</td>
+        <td>{{emp.ename}}</td>
+        <td>{{emp.eaddr}}</td>
+        <td>{{emp.emobno}}</td>
+      </tr>
+      {% endfor %}
+      {% else %}
+      <h3>No record Found</h3>
+      {% endif %}
+    </table>
+  </body>
+</html>

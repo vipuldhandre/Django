@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+  <head>
+    <link rel="stylesheet" href="{% static "css/style.css" %}">
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1>{{msg1}}</h1>
+    {% for i,j in dict1.items %}
+      <h3>{{j}}</h3>
+      {% endfor %}
+    <h1>{{msg2}}</h1>
+    {% for x,y in dict2.items %}
+     <h3>{{y}}</h3>
+     {% endfor %}
+     <img src="{% static "image/img3.jpg" %}" alt="image">
+     <hr>
+     <h1>{{msg}}</h1>
+     {% for k,v in dict.items %}
+     <h3>{{v}}</h3>
+     {% endfor %}
+     <hr>
+     <img src="{% static "image/img2.jpg" %}" alt="image">
+     <hr>
+     <h1>{{msg}}</h1>
+     {% for k,v in dict.items %}
+     <h3>{{v}}</h3>
+     {% endfor %}
+     <hr>
+      <img src="{% static "image/img3.jpg" %}" alt="image">
+
+  </body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <form class="" action="/home/" method="post">{% csrf_token %}
+      {{form.as_p}}
+      <button type="submit" name="button">Submit</button>
+    </form>
+    {% if profile %}
+      {% for p in profile %}
+        {{p.name}}
+        {{p.profile_created}}
+        <img src="{{p.propic.url}}" alt="">
+      {% endfor %}
+    {% endif %}
+
+  </body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <table border=2>
+      <h1>{{msg1}}</h1>
+      {% if borndata %}
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Date</th>
+          <th>City</th>
+        </tr>
+      </thead>
+      {% for born in borndata %}
+      <tr>
+        <td>{{born.bname}}</td>
+        <td>{{born.bdate}}</td>
+        <td>{{born.bcity}}</td>
+      </tr>
+      {% endfor %}
+      {% else %}
+      <h4>No record found</h4>
+      {% endif %}
+      </table>
+      <table border=2>
+        <h1>{{msg2}}</h1>
+        {% if humandata %}
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>City</th>
+            <th>Address</th>
+          </tr>
+        </thead>
+        {% for human in humandata %}
+        <tr>
+          <td>{{human.hname}}</td>
+          <td>{{human.htype}}</td>
+          <td>{{human.hcity}}</td>
+          <td>{{human.haddr}}</td>
+        </tr>
+        {% endfor %}
+        {% else %}
+        <h4>No record found</h4>
+        {% endif %}
+        </table>
+
+  </body>
+</html>

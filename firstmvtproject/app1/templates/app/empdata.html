@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+  <head>
+    <link rel="stylesheet" href="{% static "css/style.css" %}">
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <table border=2>
+      <h1>{{msg}}</h1>
+      {% if empdata %}
+      <thead>
+        <tr>
+          <th>Id</th>
+          <th>Name</th>
+          <th>Enterprise ID</th>
+          <th>Address</th>
+
+        </tr>
+      </thead>
+      {% for emp in empdata %}
+      <tr>
+        <td>{{emp.eid}}</td>
+        <td>{{emp.ename}}</td>
+        <td>{{emp.eeid}}</td>
+        <td>{{emp.eaddr}}</td>
+
+      </tr>
+      {% endfor %}
+      {% else %}
+      <h4>No records Found</h4>
+      {% endif %}
+    </table>
+  </body>
+</html>

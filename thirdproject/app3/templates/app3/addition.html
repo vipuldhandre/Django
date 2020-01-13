@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+  <head>
+    <link rel="stylesheet" href="{% static "css/style.css" %}">
+    <meta charset="utf-8">
+    <title></title>
+
+  </head>
+  <body>
+    <h1>{{msg}}</h1>
+    {% for i,j in dict.items %}
+      <h2>{{j}}</h2>
+    {% endfor %}
+    <img src="{% static "image/alex3.jpg" %}" alt="image">
+  </body>
+</html>

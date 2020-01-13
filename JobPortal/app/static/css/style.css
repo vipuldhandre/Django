@@ -1,0 +1,15 @@
+h1{
+  text-align: center;
+}
+.jumbotron{
+  color: white;
+  background-color: tomato;
+  margin: 170px;
+
+}
+.dbtn{
+  position: absolute;
+}
+body{
+  background-color: #f6cd8b;
+}

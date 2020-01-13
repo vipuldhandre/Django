@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    {% load crispy_forms_tags %}
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <form class="" action="/customerdetails/" method="post">{% csrf_token %}
+      {{form | crispy}}<br>
+      <button type="submit" name="button">Save and Next >></button>
+
+    </form>
+
+  </body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body style='background:powderblue'>
+    <center>
+    <h1>Student information</h1>
+    <hr style='color:red'></hr>
+    {% for k,v in list2dict.items %}
+      {% for i in v %}
+        <h3>{{i}}</h3>
+      {% endfor %}
+    {% endfor %}
+    </center>
+
+  </body>
+</html>

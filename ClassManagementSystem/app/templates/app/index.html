@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <form class="" action="/search/" method="post">{% csrf_token %}
+      <input type="text" name="key" value="" placeholder="Search Here!">
+      <button type="submit" name="button">Searh Here</button>
+        </form>
+
+      {% for i in data %}
+      <h1>Student Information</h1>
+        {{i.sname}}
+        <li>  {{i.course}}</li>
+          {% for j in i.faculty.all %}
+            <li>{{j}}
+          {% endfor %}
+          {% for k in i.batch.all %}
+            <li>{{k}}
+          {% endfor %}
+
+
+      </li>
+      {% endfor %}
+
+
+      <a href="/logout/"><button type="submit" name="button">Logout</button></a>
+
+  </body>
+</html>

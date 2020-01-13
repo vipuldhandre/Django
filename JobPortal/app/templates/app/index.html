@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+  <head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="{% static "css/style.css" %}">
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <div class="jumbotron" id="jumbotron">
+    <div class="container" id="container">
+      <h1>{{msg}}</h1><br>
+      <div id="dbtn">
+      &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<a class="btn btn-primary btn-lg" href="/engineering" role="button">Engineering Job's</a>
+      <a class="btn btn-primary btn-lg" href="/management" role="button">Management Job's</a>
+      <a class="btn btn-primary btn-lg" href="/operations" role="button">Operations Job's</a>
+      </div>
+    </div>
+  </div>
+  </body>
+</html>

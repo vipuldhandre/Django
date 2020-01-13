@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <table border=2>
+      <h1>{{msg1}}</h1>
+      {% if testerdata %}
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Designation</th>
+          <th>Project</th>
+          <th>DOJ</th>
+        </tr>
+      </thead>
+      {% for tester in testerdata %}
+      <tr>
+        <td>{{tester.tname}}</td>
+        <td>{{tester.tdes}}</td>
+        <td>{{tester.tproject}}</td>
+        <td>{{tester.tdoj}}</td>
+      </tr>
+      {% endfor %}
+      {% else %}
+      <h4>No record found</h4>
+      {% endif %}
+      </table>
+      <table border=2>
+        <h1>{{msg2}}</h1>
+        {% if developerdata %}
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Designation</th>
+            <th>Project</th>
+            <th>DOJ</th>
+          </tr>
+        </thead>
+        {% for developer in developerdata %}
+        <tr>
+          <td>{{developer.dname}}</td>
+          <td>{{developer.ddes}}</td>
+          <td>{{developer.dproject}}</td>
+          <td>{{developer.ddoj}}</td>
+        </tr>
+        {% endfor %}
+        {% else %}
+        <h4>No record found</h4>
+        {% endif %}
+        </table>
+  </body>
+</html>

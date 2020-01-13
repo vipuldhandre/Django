@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    {% for i in preinvoice %}
+      <h5>Ro No.:{{i.ro_no}}</h5>
+      <h5>Ro Received Date: {{i.ro_received_date}}</h5>
+      <h5>Ro Received Time: {{i.ro_received_time}}</h5>
+      <h5>Ro Promise Date: {{i.ro_promise_date}}</h5>
+      <h5>Ro Promise Time: {{i.ro_promise_time}}</h5>
+      <h5>Customer Name:{{i.rodetails_vehicle.veh_cust.cust_name}}</h5>
+      <h5>Customer Mobile:{{i.rodetails_vehicle.veh_cust.cust_mob}}</h5>
+      <h5>Customer Email:{{i.rodetails_vehicle.veh_cust.cust_email}}</h5>
+      <h5>Vehicle Identity No:{{i.rodetails_vehicle.veh_ident_no}}</h5>
+      <h5>Vehicle Registration No:{{i.rodetails_vehicle.veh_reg_no}}</h5>
+      <h5>Vehicle Name:{{i.rodetails_vehicle.veh_name}}</h5>
+      <h5>Vehicle Model:{{i.rodetails_vehicle.veh_model}}</h5>
+      {% for j in j.rodetails_vehicle.veh_model.veh_cat.all %}
+      <h5>Vehicle Category:{{j}}</h5>
+      {% endfor %}
+      <h5>Vehicle Colour:{{i.rodetails_vehicle.veh_color}}</h5>
+      <h5>Vehicle Km:{{i.rodetails_vehicle.veh_km}}</h5>
+      <br>
+
+
+    {% endfor %}
+
+  </body>
+</html>

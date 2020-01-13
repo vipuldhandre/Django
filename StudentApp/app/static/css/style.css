@@ -1,0 +1,29 @@
+body{
+  background-color: powderblue;
+  text-align: center;
+}
+ul{
+  width: 20%;
+  margin: auto;
+}
+li{
+  text-align: left;
+}
+input{
+  width: 20%;
+}
+form{
+  display: inline;
+}
+#name{
+  width: 15%;
+}
+#rn{
+  width: 4%;
+}
+#class{
+  width: 5%;
+}
+#marks{
+  width: 5%;
+}

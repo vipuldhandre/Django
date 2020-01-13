@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+<head>
+  <link rel="stylesheet" href="{% static "css/style.css" %}">
+  <meta charset="utf-8">
+  <title></title>
+</head>
+<body>
+
+
+  <form class="" action="/studentform/" method="post">{% csrf_token %}
+    <input type="text" id="name" name="key1" value="" placeholder="Enter Student Name">
+    <input type="number" id="rn" name="key2" value="" placeholder="Rn">
+    <input type="text" id="class" name="key3" value="" placeholder="Sub">
+    <input type="number" id="marks" name="key4" value="" placeholder="Marks">&nbsp&nbsp
+    <button type="submit" name="button">Add Student</button><br><br>
+  </form>
+  <ul>
+    {% for i in data1 %}
+    <b><li>{{i.sname}}
+      {{i.srn}}
+      {{i.sclass}}
+      {{i.smarks}}</b>
+      <form class="" action="/delete/{{i.id}}/" method="post">{% csrf_token %}
+        <button type="submit" name="button">Delete</button><br><br>
+
+      </form>
+    </li>
+    {% endfor %}
+  </ul>
+</body>
+</html>

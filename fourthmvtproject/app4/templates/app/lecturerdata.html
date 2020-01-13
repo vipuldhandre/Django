@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <table border=2>
+      <h1>{{msg}}</h1>
+      {% if lecturerdata %}
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Education</th>
+          <th>Faculty</th>
+          <th>DOJ</th>
+        </tr>
+      </thead>
+      {% for lecturer in lecturerdata %}
+      <tr>
+        <td>{{lecturer.lname}}</td>
+        <td>{{lecturer.ledu}}</td>
+        <td>{{lecturer.lfac}}</td>
+        <td>{{lecturer.ldoj}}</td>
+      </tr>
+      {% endfor %}
+      {% else %}
+      <h4>No record found</h4>
+      {% endif %}
+      </table>
+  </body>
+</html>
